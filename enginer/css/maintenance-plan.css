@@ -1,0 +1,30 @@
+body{
+	background: #F0F0F0;
+}
+.ztreeli {
+	margin-bottom: 10%;
+	padding-top: 3%;
+	height: 30px;
+}
+
+.ztreelic {
+	background: #CFCFCF;
+}
+.warehousing-admin{
+	width: 98%;
+	margin: 0 auto;
+}
+.warehousing-admin .admin{
+	margin: 15px;
+}
+.tab{
+	width: 0;
+	height: 0;
+}
+.fixed-table-container {
+	border: none;
+}
+
+.bootstrap-table .table {
+	border: none;
+}

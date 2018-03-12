@@ -1,0 +1,199 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body{
+	background: #EEEEEE;
+	height: 100%;
+}
+a{
+	text-decoration:none;
+}
+
+
+/*最上面的*/
+.head{
+	width: 95%;
+	margin: 0 auto;
+	height: 6.5rem;
+	/*background: aliceblue;*/
+}
+.nav-list{
+	float: right;
+	height: 100%;
+	width: auto;
+	margin-right: 30px;
+}
+.organization,.run{
+	margin-top: 2.5rem;
+	font-size: 1.6rem;
+	cursor: pointer;
+}
+
+
+.elk {
+	width: 95%;
+	margin: 0 auto;
+}
+
+.mo {
+	background-color: rgba(9, 9, 9, 0.4);
+	width: 23%;
+	height: 0px;
+	max-width: 415px;
+	margin-top: 2%;
+	float: left;
+	margin-right: 1%;
+	margin-left: 1%;
+	border-radius: 0.5rem;
+	overflow: hidden;
+}
+
+.title {
+	width: 100%;
+	line-height: 3.5rem;
+	height: 3.5rem;
+	font-weight: bold;
+	font-size: 1.3rem;
+	border-bottom: 1px solid rgba(255, 255, 255, 0.8);
+	color: #ffffff;
+	padding-left: 9%;
+}
+
+.title span {
+	float: right;
+	margin-right: 8%;
+	font-size: 1rem;
+}
+
+.title-con {
+	width: 100%;
+	height: 3.5rem;
+	border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+.con {
+	width: 90%;
+	height: 50%;
+	margin: 0 auto;
+	font-size: 1.3rem;
+	position: relative;
+}
+
+.con1 {
+	width: 66%;
+	display: inline-block;
+	font-size: 1.2rem;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.con2 {
+	float: right;
+	background: red;
+	color: #FFFFFF;
+	text-align: center;
+	margin-top: 0.3rem;
+	font-size: 0.9rem;
+}
+
+.con .date {
+	font-size: 1rem;
+	margin-top: 0.3rem;
+	position: absolute;
+	right: 0px;
+	top: 0px;
+}
+/*guanli*/
+.guanli {
+	width: 100%;
+	position: absolute;
+	top: -100%;
+	display: none;
+}
+
+.guanli .title{
+	width: 100%;
+    height: 4rem;
+    padding-left: 3%;
+    float: left;
+    color: #ffffff;
+    border-bottom: 1px rgba(255,255,255,0.3) solid;
+    background: none;
+}
+
+/*zuzhi*/
+.zuzhi{
+	width: 100%;
+	position: absolute;
+	top: -100%;
+	display: none;
+}
+.zuzhi .title{
+	width: 100%;
+    height: 4rem;
+    padding-left: 3%;
+    float: left;
+    color: #ffffff;
+    border-bottom: 1px rgba(255,255,255,0.3) solid;
+    background: none;
+}
+/*gonggong*/
+.module-box{
+	width: 94%;
+	height: 100%;
+    margin: 0 auto;
+    background-color: rgba(9,9,9,0.4);
+    border-radius: 0.5rem;
+    letter-spacing: 1px;
+    overflow: hidden;
+    position: relative;
+}
+.header .fa-close{
+	position: absolute;
+    right: 10px;
+    top: 5px;
+    color: #fff;
+    cursor: pointer;
+    z-index: 100;
+}
+.list{
+	width: 12%;
+	height:380px;
+    padding-bottom: 2rem;
+    float: left;
+    text-align: center;
+    color: #ffffff;
+}
+.list:hover{
+	background: rgba(255,255,255,0.3);
+}
+.list .list-i{
+	width: 100%;
+	margin-top: 0.1rem;
+}
+.list .list-t{
+	font-size: 1.8rem;
+    width: 100%;
+    height: 2rem;
+    line-height: 2.5rem;
+    font-weight: bold;
+}
+.list .list-b{
+	width: 100%;
+    height: 2.5rem;
+    line-height: 3rem;
+    cursor: pointer;
+}
+.list .list-b:hover{
+	background: skyblue;
+}
+.list .list-b a{
+	color:#FFFFFF;
+	text-decoration:none;
+}
+
+
+ 

@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>日常检查</title>
+		<link rel="stylesheet" type="text/css" href="../css/bootstrap/css/bootstrap.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/sider.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/font-awesome-4.7.0/css/font-awesome.min.css" /> 
+		<link rel="stylesheet" type="text/css" href="../css/layout.min.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/components-rounded.min.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/bootstrap-select.css"/>
+		<link rel="stylesheet" type="text/css" href="../DatePicker/skin/WdatePicker.css"/>
+		<link rel="stylesheet" type="text/css" href="../public/bootstrap-table/bootstrap-table.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/nav.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/jquery.mloading.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/fullcalendar.min.css"/>	
+		<!---->
+		<link rel="stylesheet" type="text/css" href="check1.css"/>
+		<style type="text/css">
+			body{
+				font-family: "微软雅黑";
+			}
+			.dropdown-toggle{
+				color: white;
+			}			
+			.modal-content{
+				width: 240px;
+				top: 50px;
+			}
+			#ztree a:hover{
+				color: #06c;
+			}
+			.hd-main .navs .red{
+				background: red;
+			}
+			.pulldown-nav{
+				color: #fff;
+				background: #56abf2;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="page-header navbar navbar-fixed-top" style="background: url(../img/bg_bg.png);">
+			<div class="page-header-inner ">
+				<div class="page-logo" style="width: 70px;margin-top: -8px;">
+					<img class="logo-default" src="../img/logo1.png" alt="">
+				</div>
+				<div class="page-logo" style="font-size: 26px;width:500px;color: white;margin-top: 16px;">
+					河湖管理所标准化管理平台
+				</div>
+				<div class="page-top">
+					<div class="top-menu">
+						<ul class="nav navbar-nav pull-right">
+							<li class="dropdown dropdown-extended dropdown-inbox dropdown-dark " id="header_inbox_bar">
+								<a target="_blank" href="http://120.76.241.72:8060/app/main/pump-operation-directive" class="dropdown-toggle">
+									<i class="fa fa-envelope-open"></i>
+									<span class="badge badge-danger"></span>
+								</a>
+								<!-- <ul class="dropdown-menu">
+									<li class="external">
+										<a href="javascript:;" onclick="openWeb(6)">查看详情</a>
+									</li>
+									<li>
+										<ul class="dropdown-menu-list scroller" style="height: 275px; overflow: hidden; width: auto;" data-handle-color="#637283" data-initialized="1">
+											<li class="message">
+												<a href="#">
+													<span class="photo">
+		                                                        <img class="img-circle" alt="">
+		                                                    </span>
+													<span class="subject">
+		                                                        <span class="from"></span>
+													<span class="time">  </span>
+													</span>
+													<span class="message"></span>
+												</a>
+											</li>
+										</ul>
+									</li>
+								</ul> -->
+							</li>
+		
+							<li class="dropdown dropdown-user dropdown-dark">
+								<a href="javascript:;" class="dropdown-toggle">
+									<span class="username username-hide-on-mobile" id="username"></span>
+									<img alt="" class="img-circle" id="userpic" />
+								</a>
+							</li>
+							<li class="dropdown dropdown-user dropdown-dark">
+								<a href="javascript:;" class="dropdown-toggle" data-target="#logOut" data-toggle="modal" style="height: 100%;">
+									<i class="fa fa-sign-out" aria-hidden="true" style="font-size: 30px;margin-top: 5px;"></i>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="modal fade" id="logOut" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">  
+        <!-- 退出提示框 -->
+        <div class="modal-dialog" id="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" 
+                            aria-hidden="true">×
+                    </button>
+                    <h4 class="modal-title" id="myModalLabel">
+                        提示
+                    </h4>
+                </div>
+                <div class="modal-body" style="font-size:15px; ">
+                      确认是否退出
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" 
+                            data-dismiss="modal">否
+                    </button>
+                    <button type="button" class="btn btn-primary">
+                        是
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+		<!---->
+		<div class="hd-main clearfix" id="header" style="margin-top: 76px;">
+			<div class="navs">
+				<!--1-->
+				<a class="def-nav li " href="../map.html">首页</a>
+				<!--2-->
+				<a class="def-nav li " href="../engineering/engineerion-information.html">工程信息</a>	
+				<!--3-->
+				<div class="def-nav nav-organization">
+					<a class="pulldown-nav " >
+						组织管理
+					</a>
+					<div class="pulldown org app-url">
+						<div class="content">
+							<a class="li" href="../Organization/unit.html">
+								<i class="ipic ora"></i>
+								<span class="text">组织机构</span>
+							</a>
+							<a class="li " href="../management/position.html">
+								<i class="ipic man"></i>
+								<span class="text">岗位事项</span>
+							</a>
+							<a class="li " href="../engineering/management-personnel.html">
+								<i class="ipic enuser"></i>
+								<span class="text">管理人员</span>
+							</a>
+							<a class="li " href="../engineering/management-funds.html">
+								<i class="ipic enfu"></i>
+								<span class="text">管理经费</span>
+							</a>
+							<a class="li " href="../engineering/management-training.html">
+								<i class="ipic mantra"></i>
+								<span class="text">管理培训</span>
+							</a>
+						</div>	
+					</div>
+				</div>
+				<!--4-->
+				<div class="def-nav nav-emergency">
+					<a class="pulldown-nav " >
+						应急管理
+					</a>
+					<div class="pulldown contingency-management app-url">
+						<div class="content">
+							<a class="li" href="../emergency/emergency-plan.html">
+								<i class="ipic emeplan"></i>
+								<span class="text">应急预案</span>
+							</a>
+							<a class="li " href="../emergency/spare-source.html">
+								<i class="ipic emesource"></i>
+								<span class="text">备用电源</span>
+							</a>
+							<a class="li" href="../emergency/emergency-drill.html">
+								<i class="ipic emedrill"></i>
+								<span class="text">应急演练</span>
+							</a>
+							<a class="li" href="../emergency/materials.html">
+								<i class="ipic emematerials"></i>
+								<span class="text">防汛物资</span>
+							</a>
+							<a class="li" href="../emergency/danger-management.html">
+								<i class="ipic emedanger"></i>
+								<span class="text">险情管理</span>
+							</a>
+							<a class="li" href="../emergency/emergency-response.html">
+								<i class="ipic emeresponse"></i>
+								<span class="text">应急响应</span>
+							</a>
+						</div>	
+					</div>
+				</div>		
+				<!--5-->
+				<div class="def-nav nav-equipment">
+					<a class="pulldown-nav ">
+						设备管理
+					</a>
+					<div class="pulldown equipment-management app-url">
+						<div class="content">
+							<a class="li " href="../equipment/device-management.html">
+								<i class="ipic device"></i>
+								<span class="text">设备管理</span>
+							</a>
+							<a class="li" href="../equipment/rating-record.html">
+								<i class="ipic rating"></i>
+								<span class="text">评级记录</span>
+							</a>
+						</div>	
+					</div>
+				</div>	
+				<!--6-->
+				<div class="def-nav nav-monitor">
+					<a class="pulldown-nav ">
+						监控监测
+					</a>
+					<div class="pulldown monitor app-url">
+						<div class="content">
+							<a class="li" href="http://120.76.241.72:8060/app/main/check-control" target="_blank">
+								<i class="fa fa-file fa-lg"></i>
+								<span class="text">监控巡查</span>
+							</a>
+							<a class="li" href="http://120.76.241.72:8060/app/main/damage-info" target="_blank">
+								<i class="ipic dangeinfo"></i>
+								<span class="text">隐患记录</span>
+							</a>
+							<a class="li" target="_blank" href="http://120.76.241.72:8060/app/main/videos">
+								<i class="ipic serv"></i>
+								<span class="text">视频监控</span>
+							</a>
+							<a class="li" target="_blank" href="http://120.76.241.72:8060/app/main/project-observation">
+								<i class="ipic safeche"></i>
+								<span class="text">安全监测</span>
+							</a>
+							<a class="li" href="../realtimesurvey/sluice.html">
+								<i class="ipic waininfo"></i>
+								<span class="text">水位信息</span>
+							</a>
+							<a class="li" href="../realtimesurvey/pump.html">
+								<i class="ipic pumpinfo"></i>
+								<span class="text">泵站信息</span>
+							</a>
+							<a class="li" href="../realtimesurvey/waterinfo.html">
+								<i class="ipic wain"></i>
+								<span class="text">水位过程</span>
+							</a>
+							
+						</div>	
+					</div>
+				</div>
+				<!--7-->
+				<div class="def-nav nav-check">
+					<a class="pulldown-nav red" >
+						工程检查
+					</a>
+					<div class="pulldown check app-url">
+						<div class="content">
+							<a class="li red" href="../check/check1.html">
+								<i class="ipic check1"></i>
+								<span class="text">日常检查</span>
+							</a>
+							<a class="li" href="../check/regular-inspection.html">
+								<i class="ipic regular"></i>
+								<span class="text">定期检查</span>
+							</a>
+							<a class="li" href="../check/especially-check.html">
+								<i class="ipic especially"></i>
+								<span class="text">特别检查</span>
+							</a>
+							<a class="li" href="../check/special-check.html">
+								<i class="ipic special"></i>
+								<span class="text">专项检查</span>
+							</a>
+							<a class="li" target="_blank" href="http://120.76.241.72:8060/app/main/preboot-inspection">
+								<i class="fa fa-file fa-lg"></i>
+								<span class="text">调度检查</span>
+							</a>
+							<a class="li" target="_blank" href="http://120.76.241.72:8060/app/main/gate-test-run">
+								<i class="fa fa-file fa-lg"></i>
+								<span class="text">设备检查</span>
+							</a>
+						</div>	
+					</div>
+				</div>
+				<!--8-->
+				<div class="def-nav nav-service">
+					<a class="pulldown-nav" >
+						维修养护
+					</a>
+					<div class="pulldown service app-url">
+						<div class="content">
+							<a class="li" href="../maintenance-maintenance/maintenance-plan.html">
+								<i class="ipic mainplan"></i>
+								<span class="text">维养计划</span>
+							</a>
+							<a class="li" href="../maintenance-maintenance/maintenance-funds.html">
+								<i class="ipic mainfund"></i>
+								<span class="text">维养资金</span>
+							</a>
+							<a class="li" target="_blank" href="http://120.76.241.72:8060/app/main/raise-management">
+								<i class="ipic mainman"></i>
+								<span class="text">维养管理</span>
+							</a>
+							<a class="li" href="http://120.76.241.72:8060/app/main/ensured-ruggedized" target="_blank">
+								<i class="ipic mainmovedan"></i>
+								<span class="text">除险加固</span>
+							</a>
+							<a class="li " href="../maintenance-maintenance/professionalization-management.html">
+								<i class="ipic profeman"></i>
+								<span class="text">物业管理</span>
+							</a>
+							<a class="li" href="../maintenance-maintenance/company-management.html">
+								<i class="ipic maincom"></i>
+								<span class="text">物业单位</span>
+							</a>
+							<a class="li" href="../maintenance-maintenance/contract-management.html">
+								<i class="ipic maincont"></i>
+								<span class="text">合同管理</span>
+							</a>
+						</div>	
+					</div>
+				</div>
+				<!--9-->
+				<div class="def-nav nav-scheduling">
+					<a class="pulldown-nav " >
+						运行操作
+					</a>
+					<div class="pulldown scheduling app-url">
+						<div class="content">
+							<a class="li" href="../dispatch-operation/water-sluice.html">
+								<i class="ipic water-sluice"></i>
+								<span class="text">水闸</span>
+							</a>
+							<a class="li " target="view_window" href="http://120.76.241.72:8060/app/main/pump-operation-directive">
+								<i class="ipic pump-station"></i>
+								<span class="text">泵站</span>
+							</a>	
+						</div>	
+					</div>
+				</div>
+			<!---->
+			</div>
+		</div>
+		
+		<div style="padding-left: 20px;margin-top:0px;background: white;">
+			工程检查&nbsp;>&nbsp;日常检查
+		</div>
+		
+		<!---->
+		<div class="col-xs-3 col-lg-2">
+			<div class="portlet light bordered" style="background: #f2fbff;overflow: auto;margin-top: 10px;">
+				<div class="portlet-title tabbable-line">
+					<div class="caption caption-md">
+						<i class="icon-globe theme-font hide"></i>
+						<span class="caption-subject font-blue-madison bold uppercase">工程类型</span>
+					</div>
+					<div class="select" style="float: right;margin-top: 5px;">
+						<div class="col-md-8">
+							<select id="usertype" name="usertype" class="selectpicker show-tick form-control " multiple>
+								
+							</select>
+						</div>
+					</div>
+				</div>
+				<div class="portlet-body">
+					<div class="tab-content">
+						<div class="tab-pane active" id="tab_1_1">
+							<div class="scroller" data-always-visible="1" data-rail-visible1="0" data-handle-color="#D7DCE2">
+								<ul id="ztree">
+									
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--日历-->
+		<div class="main-content" id="maincontent" style="display: block;">	
+			<div class="fn-panel" style="margin-top:15px;">
+				<div class="fn-chart">
+					<div class="form-group" id="show_detail">该月共<span>0</span>天，巡查次数<span>0</span>次，巡查天数<span>0</span>天，巡查发现隐患问题<span>0</span>个，剩余<span>0</span>个问题未处理。</div>
+					<div class="form-group">
+						<div id="calendar" class="fc fc-ltr fc-unthemed"></div>
+						<label><span class="text-danger">*说明：红色代表当天巡查有隐患问题，蓝色代表当天正在巡查中，灰色代表当天未巡查，绿色代表当天巡查无隐患问题。</span></label>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<!--dierye-->
+		<div id="map" style="min-height: 500px;display: none;"> 
+			<div class="patrol-list" id="patrol_list">
+		        <div class="form-inline inline-padding">
+		            <div class="form-group">
+		                <p class="form-control-static uesd-color">巡查情况</p>
+		            </div>
+		            <div class="form-group pull-right">
+		                <button type="button" class="btn btn-sm btn-success" title="返回" onclick="BackUrl();">
+		                	<i class="fa fa-arrow-left"></i>
+		                </button>
+		            </div>
+		        </div>
+		        <div class="total">
+		            <p class="text-center" id="checkday_html">2017-09-12</p>
+		            <p class="text-center">共巡查<strong class="text-primary" id="checkcount_html"></strong>次</p>
+		            <p class="text-center" id="title_ppnm"></p>
+		        </div>
+		        <div class="fn-patrol-table" style="height: calc(100% - 184px);">
+		            <div class="bootstrap-table">
+		            	<div class="fixed-table-toolbar">
+		            		
+		            	</div>
+		            	<div class="fixed-table-container" style="padding-bottom: 0px;">
+		            		<div class="fixed-table-header" style="display: none;">
+		            			<table></table>
+		            		</div>
+		            		<div class="fixed-table-body">
+		            			<!--<div class="fixed-table-loading" style="top: 1px;">正在努力地加载数据中，请稍候……</div>-->
+		            			<table class="table table-nobordered patrol-table table-hover table-striped" id="daily_check_table">
+						            <thead>
+						            	<tr>
+						            		<th style="" data-field="ops" tabindex="0">
+						            			<div class="th-inner "></div>
+						            			<div class="fht-cell"></div>
+						            		</th>
+						            	</tr>
+						            </thead>
+						            <tbody>
+						            	<tr data-index="0">
+											
+						            	</tr>					            	
+						            </tbody>
+					            </table>
+					        </div>    
+		            </div>
+		            <div class="fixed-table-footer" style="display: none;">
+		            	<table>
+		            		<tbody>
+		            			<tr></tr>
+		            		</tbody>
+		            	</table>
+		            </div>
+		            <div class="fixed-table-pagination" style="display: none;"></div>
+		            </div>
+		            </div>
+		            <!--<div class="clearfix"></div>-->
+		        </div>
+		    </div>
+		    <!--you-->
+		    <div class="fn-panel-body" id="fn-panel-list" style="display: none;">
+		    	<ul class="nav-tabs">
+		            <li class="active">
+		            	<a data-src="#Locus" class="locus">轨迹</a>
+		            </li>
+		            <li class="">
+		            	<a data-src="#Ledger" class="ledger">台账</a>
+		            </li>
+		            <li class="">
+		            	<a data-src="#Trouble" class="trouble">隐患</a>
+		            </li>
+		            <li class="">
+		            	<a data-src="#Filled" class="filled">填写项</a>
+		            </li>
+		        </ul>
+		        <!--轨迹-->
+		         <div class="tab-pane tab-padding tab-table" style="height: 100%; display: none;overflow: auto;" id="locus">
+		         	<iframe src="" width="100%" height=""></iframe>
+		         </div>
+		        <!--台账-->
+		        <div class="tab-pane tab-padding tab-table" style="height: 90%; display: none;overflow-y: auto;" id="ledger">
+                	<table class="table table-striped" id="ledger_table">
+                		<caption><span>水闸运行中检查</span>巡视检查表</caption>
+                		<tbody>
+                			<tr>
+                				<td colspan="5">
+                					<label>日期：&nbsp;<span class="day"></span></label>
+                					<!--<label>天气&nbsp;&nbsp;<span></span></label>-->
+                				</td>
+                			</tr>
+                			<tr>
+                				<th style="width: 15%;">部位</th>
+                				<th style="width: 45%;">检查事项</th>
+                				<th style="width: 10%;">检查时间</th>
+                				<th style="width: 10%;">检查结果</th>
+                				<th style="width: 20%;">处理情况</th>
+                			</tr>
+                			<tr>
+                				<td>中控室</td>
+                				<td>上位机计算机系统、计算机自动化控制系统是否正常；直流屏电流、电压是否正常，各表计显示是否正常；保护屏主变保护、机组保护是否正常；监控屏UPS是否正常、图像监控系统是否正常；流量计工作是否正常；广播系统是否正常。</td>
+                				<td>2017-09-12 00:04</td>
+                				<td><span class="text-success">【正常】</span></td>
+                				<td>--</td>
+                			</tr>       			
+                			<tr>
+                				<td colspan="1" class="bold">巡检路线</td>
+                				<td colspan="4">水闸运行中检查</td>
+                			</tr>
+                			<tr>
+                				<td colspan="1" class="bold">审核意见</td>
+                				<td colspan="4">
+                					<textarea class="form-control" id="Audit_Opinion"></textarea>
+                					<!--<div class="msg-footer">您已经输入了<span id="textLength">
+                						<strong>0</strong></span>个字，最多<span id="lbl_lastMsgLength">
+                						<strong>200</strong></span>个字，多出的字符将被截断。
+                					</div>-->
+                				</td>
+                			</tr>
+                			<tr>
+                				<td colspan="5">
+                					<label>巡查人员：<span>asdasd</span></label>
+                					<label class="wd40">审核人(校核人)：
+                					<input type="text" class="form-control" style="width: 200px" id="Audit_User_Name" maxlength="25" readonly="" value="111"></label>
+                				</td>
+                			</tr>
+                			<tr>
+                				<td colspan="5">
+                					<div class="fn-text-center" style="text-align:center;">
+                					<input type="button" class="btn btn-primary"  value="保存">
+                					</div>
+                				</td>
+                			</tr>
+                		</tbody>
+                	</table>
+            	</div>
+		        <!--隐患-->
+		        <div class="tab-pane tab-padding" style="height: 100%; display: none;" id="trouble">
+	                <div class="form-inline">
+	                    <h4 class="form-item fn-text-center" style="text-align: center;">本次巡查发现的问题
+	                    </h4>
+	                </div>
+	                <!--表1-->
+	                <div class="fn-table">				
+						<div class="table-now" >
+							<div id="table-now"></div>	
+						</div>				
+					</div>
+	                <!--表1-->	                
+	                <div class="form-inline">
+	                    <h4 class="form-item fn-text-center" style="text-align: center;">历史问题跟踪情况
+	                    </h4>
+	                </div>
+	                <!--表2-->
+	                <div class="fn-table">				
+						<div class="table-history" >
+							<div id="table-history"></div>	
+						</div>				
+					</div>
+	                <!--表2-->	                
+	            </div>
+		        <!--填写项-->
+		        <div class="tab-pane tab-padding" style="height: 100%; display: none;" id="filled">
+					<div class="form-inline">
+						<h4 class="form-item fn-text-center" style="text-align: center;">本次巡查填写项列表
+					    </h4>
+					</div>
+					<div class="fn-table">
+						<div id="table-lie"></div>	
+					</div>
+				</div>
+		        <!---->
+		    </div>
+		<!---->    
+		</div>		
+	</body>
+	<script src="../public/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../js/jquery.cookie.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../public/global.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../public/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../js/jquery.mloading.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../public/bootstrap-select.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../DatePicker/WdatePicker.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../public/bootstrap-table/bootstrap-table.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../public/bootstrap-table/bootstrap-table-zh-CN.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../js/nav.js" type="text/javascript" charset="utf-8"></script>
+	<!--rili-->
+	<script src="../public/moment.min.js" type="text/javascript"></script>
+	<script src="../public/fullcalendar.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../public/zh-cn.js" type="text/javascript" charset="utf-8"></script>
+	<!---->
+	<script src="../js/check1.js" type="text/javascript" charset="utf-8"></script>
+	
+</html>

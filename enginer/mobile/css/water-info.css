@@ -1,0 +1,73 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+body{
+	background: #f1f1f1;
+}
+.top{
+	width: 100%;
+	height: 130px;
+	background: #05a2ef;
+	overflow: hidden;
+	text-align: center;
+	
+}
+.top .time{
+	color: white;
+	margin-top: 5px;
+	font-size: 16px;
+}
+.top p {
+	color: white;
+	margin-top: 5px;	
+	font-size: 20px;
+}
+.openhole,.closehole{
+	font-size:30px;
+	color: white;
+	margin-top: 10px;
+}
+/*=========内容===========*/
+.con{
+	width: 100%;
+	height: 100%;
+	background: white;
+	border-radius: 10px;
+}
+.tabframe{
+	width: 100%;
+	height: 40px;
+	background: white;
+	overflow: hidden;
+	border-bottom: 1px solid #f2f2f2;
+}
+.weui-navbar{
+	top: 8px;
+}
+.weui-navbar__item{
+	background:white;
+	padding: 0;
+}
+.weui-navbar__item.weui-bar__item--on{
+	background: #3598dc;
+	color: white;
+}
+.inlandcon{
+	width: 100%;
+	height: 330px;
+	border-bottom: 1px solid #f2f2f2;
+}
+.title{
+	width: 95%;
+	margin: 0 auto;	
+	height: 30px;
+	border-bottom: 1px solid #f2f2f2;
+}
+.title span{
+	color: #47e1e1;
+	line-height: 30px;
+}
+
+
+

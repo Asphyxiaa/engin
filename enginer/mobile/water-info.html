@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0,user-scalable=no,minimal-ui">
+		<title>水位信息</title>
+		<link rel="stylesheet" type="text/css" href="css/weui.min.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/font-awesome-4.7.0/css/font-awesome.css"/>
+		<link rel="stylesheet" type="text/css" href="css/jquery-weui.min.css"/>
+		<link rel="stylesheet" type="text/css" href="css/water-info.css"/>
+	</head>
+	<body>
+		<div class="top">
+			<p class="time"></p>
+			<div class="weui-flex">
+			  	<div class="weui-flex__item">
+				  	<p>内河水位</p>
+				  	<div class="openhole">
+				  		<span></span>&nbsp;m
+				  	</div>
+			  	</div>
+			  	<div class="weui-flex__item">
+				  	<p>外江水位</p>
+				  	<div class="closehole">
+				  		<span></span>&nbsp;m
+				  	</div>
+			  	</div>
+			</div>
+		</div>
+	    
+	    <div class="con">
+			<div class="weui-tab">
+				<div class="tabframe">
+					<div class="weui-navbar">
+					    <a class="weui-navbar__item weui-bar__item--on" href="#tab1">				      	
+					      	今日水位
+					    </a>
+					    <a class="weui-navbar__item" href="#tab2">				      	
+					      	近3日水位
+					    </a>
+					    <a class="weui-navbar__item" href="#tab3">				      	
+					      	近7日水位
+					    </a>
+					</div>
+				</div>			  	
+				<div class="weui-tab__bd">
+					<!--1-->
+				    <div id="tab1" class="weui-tab__bd-item weui-tab__bd-item--active">
+				      	<div class="inlandcon">
+				      		<div class="title">
+				      			<i class="fa fa-times-circle"></i>
+				      			<span>内河水位单日过程线</span>
+				      		</div>
+				      		<div id="echarts-inland" style="height: 300px;"></div>
+				      	</div>
+				        <div class="inlandcon">
+				      		<div class="title">
+				      			<i class="fa fa-times-circle"></i>
+				      			<span>外江水位单日过程线</span>
+				      		</div>
+				      		<div id="echarts-outside" style="height: 300px;"></div>
+				      	</div>
+				    </div>
+				    <!--2-->
+				    <div id="tab2" class="weui-tab__bd-item">
+				    	<div class="inlandcon">
+				      		<div class="title">
+				      			<i class="fa fa-times-circle"></i>
+				      			<span>内河水位单日过程线</span>
+				      		</div>
+				      		<div id="threeinland" style="height: 300px;"></div>
+				      	</div>
+				        <div class="inlandcon">
+				      		<div class="title">
+				      			<i class="fa fa-times-circle"></i>
+				      			<span>外江水位单日过程线</span>
+				      		</div>
+				      		<div id="threeoutside" style="height: 300px;"></div>
+				      	</div>
+				    </div>
+				    <!--3-->
+				    <div id="tab3" class="weui-tab__bd-item">
+				    	<div class="inlandcon">
+				      		<div class="title">
+				      			<i class="fa fa-times-circle"></i>
+				      			<span>内河水位单日过程线</span>
+				      		</div>
+				      		<div id="seveninland" style="height: 300px;"></div>
+				      	</div>
+				        <div class="inlandcon">
+				      		<div class="title">
+				      			<i class="fa fa-times-circle"></i>
+				      			<span>外江水位单日过程线</span>
+				      		</div>
+				      		<div id="sevenoutside" style="height: 300px;"></div>
+				      	</div>
+				    </div>
+			  	</div>
+			  	
+			</div>			
+		</div>
+		
+	</body>
+<script src="../public/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../public/echarts.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/jquery-weui.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/global-mobile.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/water-info.js" type="text/javascript" charset="utf-8"></script>
+</html>

@@ -1,0 +1,203 @@
+::-webkit-scrollbar{width:10px;}
+::-webkit-scrollbar-track{background-color:#bee1eb;border-radius:20px;}
+::-webkit-scrollbar-thumb{background-color:#56abf2;border-radius:20px;}
+
+body{
+	background: #F0F0F0;
+	font: "Microsoft YaHei", "Microsoft JhengHei";
+}
+.navs i{
+	color: blue;
+}
+
+.pump-group {
+	margin-top: 2%;
+}
+#ztree{
+	overflow-y: auto;
+	padding-right: 10px;
+}
+.ztreeli {
+	margin-bottom: 10%;
+	padding:5px;
+	height: 30px;
+}
+
+.ztreelic {
+	background: #CFCFCF;
+}
+#maincontent a:hover{
+	color: #06c;
+}
+#ztree li{
+	cursor:pointer;
+}
+#pdf {
+	border: none;
+	height: 0;
+}
+#pdf1 {
+	border: none;
+	height: 0;
+}
+#pdf2 {
+	border: none;
+	height: 0;
+}
+
+.tab {
+	height: 0px;
+	width: 0px;
+}
+
+#tab_blue {
+	display: none;
+}
+
+#tab_face {
+	display: none;
+}
+
+.limts div {
+	float: left;
+	margin-right: 5%;
+}
+.reg div{
+	float: left;
+	margin-right: 5%;
+}
+
+.safe div {
+	float: left;
+	margin-right: 5%;
+}
+
+.ps-list .ps-current {
+	display: none;
+}
+
+.select {
+	position: absolute;
+	right:0px;
+	top: 5px;
+}
+#form1 a{
+	float: right;
+	padding-right: 2%;
+	display: block;
+}
+
+.ipic{
+   display: block;
+   width: 32px;
+   height: 32px;
+   margin:8px auto; 
+}
+.ora{
+   background:url("../img/ora.png") no-repeat;
+}
+.man{
+  background:url("../img/man.png") no-repeat;
+}
+.enuser{
+  background:url("../img/enuser.png") no-repeat;
+}
+.enfu{
+  background:url("../img/enfu.png") no-repeat;
+}
+.mantra{
+  background:url("../img/mantra.png") no-repeat;
+}
+
+.emeplan{
+  background:url("../img/emeplan.png") no-repeat;
+}
+.emesource{
+  background:url("../img/emesource.png") no-repeat;
+}
+.emedrill{
+  background:url("../img/emedrill.png") no-repeat;
+}
+.emematerials{
+  background:url("../img/emematerials.png") no-repeat;
+}
+.emedanger{
+  background:url("../img/emedanger.png") no-repeat;
+}
+.emeresponse{
+  background:url("../img/emeresponse.png") no-repeat;
+}
+
+.device{
+  background:url("../img/device.png") no-repeat;
+}
+.rating{
+  background:url("../img/rating.png") no-repeat;
+}
+
+/*.realcheck{ 
+ background:url("../img/realcheck.png") no-repeat;
+}*/
+.dangeinfo{
+  background:url("../img/dangeinfo.png") no-repeat;
+}
+.serv{
+  background:url("../img/serv.png") no-repeat;
+}
+.safeche{
+  background:url("../img/safeche.png") no-repeat;
+}
+.waininfo{
+  background:url("../img/waininfo.png") no-repeat;
+}
+.pumpinfo{
+  background:url("../img/pumpinfo.png") no-repeat;
+}
+.wain{
+  background:url("../img/wain.png") no-repeat;
+}
+
+.check1{
+  background:url("../img/check1.png") no-repeat;  
+}
+.regular{
+  background:url("../img/regular.png") no-repeat;  
+}
+.especially{
+  background:url("../img/especially.png") no-repeat;  
+}
+.special{
+  background:url("../img/special.png") no-repeat;  
+}
+
+.mainplan{
+  background:url("../img/mainplan.png") no-repeat;  
+}
+.mainfund{
+  background:url("../img/mainfund.png") no-repeat;  
+}
+.mainman{
+  background:url("../img/mainman.png") no-repeat;  
+}
+.mainmovedan{
+  background:url("../img/mainmovedan.png") no-repeat;  
+}
+.profeman{
+  background:url("../img/profeman.png") no-repeat;  
+}
+.maincom{
+  background:url("../img/maincom.png") no-repeat;  
+}
+.maincont{
+  background:url("../img/maincont.png") no-repeat;  
+}
+
+.water-sluice{
+  background:url("../img/water-sluice.png") no-repeat;  
+}
+.pump-station{
+  background:url("../img/pump-station.png") no-repeat;  
+}
+.fa-lg{
+	margin: 17px auto;
+}

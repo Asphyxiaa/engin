@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>防汛物资</title>
+		<link rel="stylesheet" type="text/css" href="../css/bootstrap/css/bootstrap.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/sider.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/font-awesome-4.7.0/css/font-awesome.min.css" /> 
+		<link rel="stylesheet" type="text/css" href="../css/layout.min.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/components-rounded.min.css"/>
+		<link href="https://cdn.bootcss.com/zTree.v3/3.5.29/css/metroStyle/metroStyle.min.css" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="../css/pgwslideshow.css"/>
+		<link rel="stylesheet" type="text/css" href="../DatePicker/skin/WdatePicker.css"/>	
+		<link rel="stylesheet" type="text/css" href="../public/bootstrap-table/bootstrap-table.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/nav.css"/>
+		<link rel="stylesheet" type="text/css" href="../public/lightbox/lightbox.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/emergency-plan.css"/>
+		<style type="text/css">
+			body{
+				font-family: "微软雅黑";
+			}
+			.dropdown-toggle{
+				color: white;
+			}			
+			.modal-content{
+				width: 240px;
+				top: 50px;
+			}
+			.hd-main .navs .red{
+				background: red;
+			}
+			.pulldown-nav{
+				color: #fff;
+				background: #56abf2;
+			}
+			.ipic{
+			   display: block;
+			   width: 32px;
+			   height: 32px;
+			   margin:8px auto; 
+			}
+			.ora{
+			   background:url("../img/ora.png") no-repeat;
+			}
+			.man{
+			  background:url("../img/man.png") no-repeat;
+			}
+			.enuser{
+			  background:url("../img/enuser.png") no-repeat;
+			}
+			.enfu{
+			  background:url("../img/enfu.png") no-repeat;
+			}
+			.mantra{
+			  background:url("../img/mantra.png") no-repeat;
+			}
+
+			.emeplan{
+			  background:url("../img/emeplan.png") no-repeat;
+			}
+			.emesource{
+			  background:url("../img/emesource.png") no-repeat;
+			}
+			.emedrill{
+			  background:url("../img/emedrill.png") no-repeat;
+			}
+			.emematerials{
+			  background:url("../img/emematerials.png") no-repeat;
+			}
+			.emedanger{
+			  background:url("../img/emedanger.png") no-repeat;
+			}
+			.emeresponse{
+			  background:url("../img/emeresponse.png") no-repeat;
+			}
+
+			.device{
+			  background:url("../img/device.png") no-repeat;
+			}
+			.rating{
+			  background:url("../img/rating.png") no-repeat;
+			}
+
+			/*.realcheck{ 
+			 background:url("../img/realcheck.png") no-repeat;
+			}*/
+			.dangeinfo{
+			  background:url("../img/dangeinfo.png") no-repeat;
+			}
+			.serv{
+			  background:url("../img/serv.png") no-repeat;
+			}
+			.safeche{
+			  background:url("../img/safeche.png") no-repeat;
+			}
+			.waininfo{
+			  background:url("../img/waininfo.png") no-repeat;
+			}
+			.pumpinfo{
+			  background:url("../img/pumpinfo.png") no-repeat;
+			}
+			.wain{
+			  background:url("../img/wain.png") no-repeat;
+			}
+
+			.check1{
+			  background:url("../img/check1.png") no-repeat;  
+			}
+			.regular{
+			  background:url("../img/regular.png") no-repeat;  
+			}
+			.especially{
+			  background:url("../img/especially.png") no-repeat;  
+			}
+			.special{
+			  background:url("../img/special.png") no-repeat;  
+			}
+
+			.mainplan{
+			  background:url("../img/mainplan.png") no-repeat;  
+			}
+			.mainfund{
+			  background:url("../img/mainfund.png") no-repeat;  
+			}
+			.mainman{
+			  background:url("../img/mainman.png") no-repeat;  
+			}
+			.mainmovedan{
+			  background:url("../img/mainmovedan.png") no-repeat;  
+			}
+			.profeman{
+			  background:url("../img/profeman.png") no-repeat;  
+			}
+			.maincom{
+			  background:url("../img/maincom.png") no-repeat;  
+			}
+			.maincont{
+			  background:url("../img/maincont.png") no-repeat;  
+			}
+
+			.water-sluice{
+			  background:url("../img/water-sluice.png") no-repeat;  
+			}
+			.pump-station{
+			  background:url("../img/pump-station.png") no-repeat;  
+			}
+			.fa-lg{
+				margin: 17px auto;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="page-header navbar navbar-fixed-top" style="background: url(../img/bg_bg.png);">
+			<div class="page-header-inner ">
+				<div class="page-logo" style="width: 70px;margin-top: -8px;">
+					<img class="logo-default" src="../img/logo1.png" alt="">
+				</div>
+				<div class="page-logo" style="font-size: 26px;width:500px;color: white;margin-top: 16px;">
+					河湖管理所标准化管理平台
+				</div>
+				<div class="page-top">
+					<div class="top-menu">
+						<ul class="nav navbar-nav pull-right">
+							<li class="dropdown dropdown-extended dropdown-inbox dropdown-dark " id="header_inbox_bar">
+								<a target="_blank" href="http://120.76.241.72:8060/app/main/pump-operation-directive" class="dropdown-toggle">
+									<i class="fa fa-envelope-open"></i>
+									<span class="badge badge-danger"></span>
+								</a>
+<!-- 								<ul class="dropdown-menu">
+									<li class="external">
+										<a href="javascript:;" onclick="openWeb(6)">查看详情</a>
+									</li>
+									<li>
+										<ul class="dropdown-menu-list scroller" style="height: 275px; overflow: hidden; width: auto;" data-handle-color="#637283" data-initialized="1">
+											<li class="message">
+												<a href="#">
+													<span class="photo">
+		                                                        <img class="img-circle" alt="">
+		                                                    </span>
+													<span class="subject">
+		                                                        <span class="from"></span>
+													<span class="time">  </span>
+													</span>
+													<span class="message"></span>
+												</a>
+											</li>
+										</ul>
+									</li>
+								</ul> -->
+							</li>
+		
+							<li class="dropdown dropdown-user dropdown-dark">
+								<a href="javascript:;" class="dropdown-toggle">
+									<span class="username username-hide-on-mobile" id="username"></span>
+									<img alt="" class="img-circle" id="userpic" />
+								</a>
+							</li>
+							<li class="dropdown dropdown-user dropdown-dark">
+								<a href="javascript:;" class="dropdown-toggle" data-target="#logOut" data-toggle="modal" style="height: 100%;">
+									<i class="fa fa-sign-out" aria-hidden="true" style="font-size: 30px;margin-top: 5px;"></i>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="modal fade" id="logOut" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">  
+        <!-- 退出提示框 -->
+	        <div class="modal-dialog" id="modal-dialog">
+	            <div class="modal-content">
+	                <div class="modal-header">
+	                    <button type="button" class="close" data-dismiss="modal" 
+	                            aria-hidden="true">×
+	                    </button>
+	                    <h4 class="modal-title" id="myModalLabel">
+	                        提示
+	                    </h4>
+	                </div>
+	                <div class="modal-body" style="font-size:15px; ">
+	                      确认是否退出
+	                </div>
+	                <div class="modal-footer">
+	                    <button type="button" class="btn btn-default" 
+	                            data-dismiss="modal">否
+	                    </button>
+	                    <button type="button" class="btn btn-primary">
+	                        是
+	                    </button>
+	                </div>
+	            </div>
+	        </div>
+	    </div>
+		<!---->
+		<div class="hd-main clearfix" id="header" style="margin-top: 76px;">
+			<div class="navs">
+				<!--1-->
+				<a class="def-nav li " href="../map.html">首页</a>
+				<!--2-->
+				<a class="def-nav li " href="../engineering/engineerion-information.html">工程信息</a>	
+				<!--3-->
+				<div class="def-nav nav-organization">
+					<a class="pulldown-nav" >
+						组织管理
+					</a>
+					<div class="pulldown org app-url">
+						<div class="content">
+							<a class="li" href="../Organization/unit.html">
+								<i class="ipic ora"></i>
+								<span class="text">组织机构</span>
+							</a>
+							<a class="li" href="../management/position.html">
+								<i class="ipic man"></i>
+								<span class="text">岗位事项</span>
+							</a>
+							<a class="li " href="../engineering/management-personnel.html">
+								<i class="ipic enuser"></i>
+								<span class="text">管理人员</span>
+							</a>
+							<a class="li " href="../engineering/management-funds.html">
+								<i class="ipic enfu"></i>
+								<span class="text">管理经费</span>
+							</a>
+							<a class="li " href="../engineering/management-training.html">
+								<i class="ipic mantra"></i>
+								<span class="text">管理培训</span>
+							</a>
+						</div>	
+					</div>
+				</div>
+				<!--4-->
+				<div class="def-nav nav-emergency">
+					<a class="pulldown-nav red" >
+						应急管理
+					</a>
+					<div class="pulldown contingency-management app-url">
+						<div class="content">
+							<a class="li" href="../emergency/emergency-plan.html">
+								<i class="ipic emeplan"></i>
+								<span class="text">应急预案</span>
+							</a>
+							<a class="li " href="../emergency/spare-source.html">
+								<i class="ipic emesource"></i>
+								<span class="text">备用电源</span>
+							</a>
+							<a class="li" href="../emergency/emergency-drill.html">
+								<i class="ipic emedrill"></i>
+								<span class="text">应急演练</span>
+							</a>
+							<a class="li red" href="../emergency/materials.html">
+								<i class="ipic emematerials"></i>
+								<span class="text">防汛物资</span>
+							</a>
+							<a class="li" href="../emergency/danger-management.html">
+								<i class="ipic emedanger"></i>
+								<span class="text">险情管理</span>
+							</a>
+							<a class="li" href="../emergency/emergency-response.html">
+								<i class="ipic emeresponse"></i>
+								<span class="text">应急响应</span>
+							</a>
+						</div>	
+					</div>
+				</div>		
+				<!--5-->
+				<div class="def-nav nav-equipment">
+					<a class="pulldown-nav ">
+						设备管理
+					</a>
+					<div class="pulldown equipment-management app-url">
+						<div class="content">
+							<a class="li" href="../equipment/device-management.html">
+								<i class="ipic device"></i>
+								<span class="text">设备管理</span>
+							</a>
+							<a class="li" href="../equipment/rating-record.html">
+								<i class="ipic rating"></i>
+								<span class="text">评级记录</span>
+							</a>
+						</div>	
+					</div>
+				</div>	
+				<!--6-->
+				<div class="def-nav nav-monitor">
+					<a class="pulldown-nav ">
+						监控监测
+					</a>
+					<div class="pulldown monitor app-url">
+						<div class="content">
+							<a class="li" href="http://120.76.241.72:8060/app/main/check-control" target="_blank">
+								<i class="fa fa-file fa-lg"></i>
+								<span class="text">监控巡查</span>
+							</a>
+							<a class="li" href="http://120.76.241.72:8060/app/main/damage-info" target="_blank">
+								<i class="ipic dangeinfo"></i>
+								<span class="text">隐患记录</span>
+							</a>
+							<a class="li" target="_blank" href="http://120.76.241.72:8060/app/main/videos">
+								<i class="ipic serv"></i>
+								<span class="text">视频监控</span>
+							</a>
+							<a class="li" target="_blank" href="http://120.76.241.72:8060/app/main/project-observation">
+								<i class="ipic safeche"></i>
+								<span class="text">安全监测</span>
+							</a>
+							<a class="li" href="../realtimesurvey/sluice.html">
+								<i class="ipic waininfo"></i>
+								<span class="text">水位信息</span>
+							</a>
+							<a class="li" href="../realtimesurvey/pump.html">
+								<i class="ipic pumpinfo"></i>
+								<span class="text">泵站信息</span>
+							</a>
+							<a class="li" href="../realtimesurvey/waterinfo.html">
+								<i class="ipic wain"></i>
+								<span class="text">水位过程</span>
+							</a>
+							
+						</div>	
+					</div>
+				</div>
+				<!--7-->
+				<div class="def-nav nav-check">
+					<a class="pulldown-nav" >
+						工程检查
+					</a>
+					<div class="pulldown check app-url">
+						<div class="content">
+							<a class="li" href="../check/check1.html">
+								<i class="ipic check1"></i>
+								<span class="text">日常检查</span>
+							</a>
+							<a class="li" href="../check/regular-inspection.html">
+								<i class="ipic regular"></i>
+								<span class="text">定期检查</span>
+							</a>
+							<a class="li" href="../check/especially-check.html">
+								<i class="ipic especially"></i>
+								<span class="text">特别检查</span>
+							</a>
+							<a class="li" href="../check/special-check.html">
+								<i class="ipic special"></i>
+								<span class="text">专项检查</span>
+							</a>
+							<a class="li" target="_blank" href="http://120.76.241.72:8060/app/main/preboot-inspection">
+								<i class="fa fa-file fa-lg"></i>
+								<span class="text">调度检查</span>
+							</a>
+							<a class="li" target="_blank" href="http://120.76.241.72:8060/app/main/gate-test-run">
+								<i class="fa fa-file fa-lg"></i>
+								<span class="text">设备检查</span>
+							</a>
+						</div>	
+					</div>
+				</div>
+				<!--8-->
+				<div class="def-nav nav-service">
+					<a class="pulldown-nav" >
+						维修养护
+					</a>
+					<div class="pulldown service app-url">
+						<div class="content">
+							<a class="li" href="../maintenance-maintenance/maintenance-plan.html">
+								<i class="ipic mainplan"></i>
+								<span class="text">维养计划</span>
+							</a>
+							<a class="li" href="../maintenance-maintenance/maintenance-funds.html">
+								<i class="ipic mainfund"></i>
+								<span class="text">维养资金</span>
+							</a>
+							<a class="li" target="_blank" href="http://120.76.241.72:8060/app/main/raise-management">
+								<i class="ipic mainman"></i>
+								<span class="text">维养管理</span>
+							</a>
+							<a class="li" href="http://120.76.241.72:8060/app/main/ensured-ruggedized" target="_blank">
+								<i class="ipic mainmovedan"></i>
+								<span class="text">除险加固</span>
+							</a>
+							<a class="li " href="../maintenance-maintenance/professionalization-management.html">
+								<i class="ipic profeman"></i>
+								<span class="text">物业管理</span>
+							</a>
+							<a class="li" href="../maintenance-maintenance/company-management.html">
+								<i class="ipic maincom"></i>
+								<span class="text">物业单位</span>
+							</a>
+							<a class="li" href="../maintenance-maintenance/contract-management.html">
+								<i class="ipic maincont"></i>
+								<span class="text">合同管理</span>
+							</a>
+						</div>	
+					</div>
+				</div>
+				<!--9-->
+				<div class="def-nav nav-scheduling">
+					<a class="pulldown-nav " >
+						运行操作
+					</a>
+					<div class="pulldown scheduling app-url">
+						<div class="content">
+							<a class="li" href="../dispatch-operation/water-sluice.html">
+								<i class="ipic water-sluice"></i>
+								<span class="text">水闸</span>
+							</a>
+							<a class="li " target="view_window" href="http://120.76.241.72:8060/app/main/pump-operation-directive">
+								<i class="ipic pump-station"></i>
+								<span class="text">泵站</span>
+							</a>	
+						</div>	
+					</div>
+				</div>
+			<!---->
+			</div>
+		</div>
+		<!---->
+		<div style="padding-left: 20px;margin-top:0px;background: white;">
+			应急管理&nbsp;>&nbsp;防汛物资
+		</div>
+		<!---->
+		<div class="main-content" id="maincontent" style="min-height: 516px;margin-top: 10px;background: transparent">
+			<ul class="nav-tabs">
+				<li class="active">
+					<a class="stock">库存</a>
+				</li>
+				<li>
+					<a class="warehousing ">出入库管理</a>
+				</li>
+			</ul>
+			<!--左-->
+			<div class="col-xs-3 col-lg-2 zuo" style="display:block;">
+				<div class="portlet light bordered" style="background: #f2fbff;overflow: auto;	">
+					<div class="portlet-title tabbable-line">
+						<div class="caption caption-md">
+							<i class="icon-globe theme-font hide"></i>
+							<span class="caption-subject font-blue-madison bold uppercase">仓库列表</span>
+						</div>
+					</div>
+					<div class="portlet-body">
+						<div class="tab-content">
+							<div class="tab-pane active" id="tab_1_1">
+								<div class="scroller" data-always-visible="1" data-rail-visible1="0" data-handle-color="#D7DCE2">
+									<ul id="treeDemo" class="ztree">
+										<li id="treeDemo_1" class="level0" tabindex="0" hidefocus="true" treenode="">
+											<span id="treeDemo_1_switch" title="" class="button level0 switch root_close" treenode_switch="">
+															
+														</span>
+											<a id="treeDemo_1_a" class="level0 curSelectedNode" treenode_a="" onclick="" target="_blank" style="" title="曹娥江大闸">
+												<span id="treeDemo_1_ico" title="" treenode_ico="" class="button ico_close" style="">
+																
+															</span>
+												<span id="treeDemo_1_span" class="node_name">河湖管理所</span>
+											</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--右-->
+
+			<div class="con col-xs-9 col-lg-10">
+			<a style="float:right;margin-right:10px;" target="view_window" href="http://120.76.241.72:8060/app/main/material-list" >
+						<i class="fa fa-file fa-lg"></i>
+					    管理
+			</a>
+				<div class="fn-table">
+					<table class="table-dashed table-emergency">
+						<tbody>
+							<tr>
+								<td class="col-sm-3">
+									<div class="material">
+										<a href="../img/mmexport1508747496350.jpg" rel="lightbox" data-lightbox="example-1">
+											<img src="../img/mmexport1508747496350.jpg" alt="编织袋" />
+										</a>
+										<h4>编织袋</h4>
+										<p>
+											<span class="material-quantity">10000</span>
+											<span>只</span>
+										</p>
+									</div>
+								</td>
+								<td class="col-sm-3">
+									<div class="material">
+										<a href="../img/mmexport1508747500321.jpg" rel="lightbox" data-lightbox="example-2">
+											<img src="../img/mmexport1508747500321.jpg" alt="铁锹" />
+										</a>
+										<h4>铁锹</h4>
+										<p>
+											<span class="material-quantity">50</span>
+											<span>把</span>
+										</p>
+									</div>
+								</td>
+								<td class="col-sm-3">		
+									<div class="material">
+										<a href="../img/mmexport1508747494903.jpg" rel="lightbox" data-lightbox="example-3">
+											<img src="../img/mmexport1508747494903.jpg" alt="铁丝" />
+										</a>
+										<h4>铁丝</h4>
+										<p>
+											<span class="material-quantity">500</span>
+											<span>千克</span>
+										</p>
+									</div>
+								</td>
+								<td class="col-sm-3">
+									<div class="material">
+										<a href="../img/mmexport1508747501462.jpg"  rel="lightbox" data-lightbox="example-4">
+											<img src="../img/mmexport1508747501462.jpg" alt="汽油水泵" />
+										</a>
+										<h4>汽油水泵</h4>
+										<p>
+											<span class="material-quantity">5</span>
+											<span>套</span>
+										</p>
+									</div>
+								</td>								
+							</tr>
+							<tr>
+								<td class="col-sm-3">
+									<div class="material">
+										<a href="../img/mmexport1508747498011.jpg" rel="lightbox" data-lightbox="example-5">
+											<img src="../img/mmexport1508747498011.jpg" alt="救生圈" />
+										</a>
+										<h4>救生圈</h4>
+										<p>
+											<span class="material-quantity">17</span>
+											<span>只</span>
+										</p>
+									</div>
+								</td>
+								<td class="col-sm-3">
+									<div class="material">
+										<a href="../img/mmexport1508747498011.jpg" rel="lightbox" data-lightbox="example-6">
+											<img src="../img/mmexport1508747498011.jpg" alt="抛绳" />
+										</a>
+										<h4>抛绳</h4>
+										<p>
+											<span class="material-quantity">4</span>
+											<span>根</span>
+										</p>
+									</div>
+								</td>
+								<td class="col-sm-3">
+									<div class="material">
+										<a href="../img/mmexport1508747502711.jpg" rel="lightbox" data-lightbox="example-7">
+											<img src="../img/mmexport1508747502711.jpg" alt="救生衣" />
+										</a>
+										<h4>救生衣</h4>
+										<p>
+											<span class="material-quantity">26</span>
+											<span>件</span>
+										</p>
+									</div>
+								</td>
+								<td class="col-sm-3">
+									<div class="material">
+										<a href="../img/mmexport1508747499223.jpg" rel="lightbox" data-lightbox="example-8">
+											<img src="../img/mmexport1508747499223.jpg" alt="电缆" />
+										</a>
+										<h4>电缆</h4>
+										<p>
+											<span class="material-quantity">500</span>
+											<span>米</span>
+										</p>
+									</div>
+								</td>
+								<tr>
+									<td class="col-sm-3">
+										<div class="material">
+											<a href="../img/mmexport1508747499223.jpg" rel="lightbox" data-lightbox="example-9">
+												<img src="../img/mmexport1508747499223.jpg" alt="应急照明" />
+											</a>
+											<h4>应急照明</h4>
+											<p>
+												<span class="material-quantity">2</span>
+												<span>只</span>
+											</p>
+										</div>
+									</td>
+								</tr>								
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+			<!--出入库-->
+			<div class="warehousing-admin" style="display: none;">
+				<div class="form-inline admin" style="margin: 15px;">
+		            <div class="form-group">
+		                <label>开始时间：</label>
+		                <input id="start" type="text" class="form-control Wdate input-xsmall" onfocus="WdatePicker()"> 
+		            </div>
+		            <div class="form-group">
+		                <label>结束时间：</label>
+		                <input id="end" type="text" class="form-control Wdate input-xsmall" onfocus="WdatePicker()">
+		            </div>
+		            <div class="form-group">
+		                <label>物资仓库：</label>
+		                <select id="house" class="form-control ">
+		                	<option >全部</option>
+		                	<option>asdadasd</option>
+		                </select>
+		            </div>
+		            <div class="form-group">
+		                <label>物资名称：</label>
+		                <select id="house" class="form-control">
+		                	<option >全部</option>
+		                	<option>asd5456</option>
+		                </select>
+		            </div>
+		            <button type="button" class="btn btn-search btn-primary" title="查询">
+		            <i class="fa fa-search"></i>
+		            </button>
+		            <a style="float:right;margin-right:10px;" target="view_window" href="http://120.76.241.72:8060/app/main/out-storage" >
+						<i class="fa fa-file fa-lg"></i>
+					    管理
+			        </a>
+		        </div>
+		        
+				<!--图表-->				
+				<div id="table-materials"></div>
+				
+			</div>
+			<!--防汛图-->
+			
+			
+		<!---->		
+		</div>
+		
+		
+		
+		
+	</body>	
+	<script src="../public/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../js/jquery.cookie.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../public/global.js" type="text/javascript" charset="utf-8"></script>	
+	<script src="../public/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="https://cdn.bootcss.com/zTree.v3/3.5.29/js/jquery.ztree.all.min.js"></script>
+	<script src="../public/pgwslideshow.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../DatePicker/WdatePicker.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../public/bootstrap-table/bootstrap-table.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../public/bootstrap-table/bootstrap-table-zh-CN.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../js/nav.js" type="text/javascript" charset="utf-8"></script>
+	
+	<script src="../public/lightbox/lightbox.js" type="text/javascript" charset="utf-8"></script>
+	
+	<script src="../js/materials.js" type="text/javascript" charset="utf-8"></script>
+	
+	
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0,user-scalable=no,minimal-ui">
+		<title>闸门状态</title>
+		<link rel="stylesheet" type="text/css" href="css/weui.min.css"/>
+		<link rel="stylesheet" type="text/css" href="css/jquery-weui.min.css"/>
+		<link rel="stylesheet" type="text/css" href="css/pumpState.css"/>
+	</head>
+	<body>
+		<div class="top">
+			<p class="time"></p>
+			<div class="weui-flex">
+			  <div class="weui-flex__item">
+			  	<p>开启闸门</p>
+			  	<div class="openhole">
+			  		<span></span>&nbsp;孔
+			  	</div>
+			  </div>
+			  <div class="weui-flex__item">
+			  	<p>关启闸门</p>
+			  	<div class="closehole">
+			  		<span></span>&nbsp;孔
+			  	</div>
+			  </div>
+			</div>
+		</div>
+		<div class="con">
+			<div class="weui-tab">
+			  	<div class="weui-navbar">
+				    <a class="weui-navbar__item weui-bar__item--on" href="#tab1">				      	
+				      	开启闸门
+				    </a>
+				    <a class="weui-navbar__item" href="#tab2">				      	
+				      	关闭闸门
+				    </a>
+				</div>
+				<div class="weui-tab__bd">
+				    <div id="tab1" class="weui-tab__bd-item weui-tab__bd-item--active">
+				      	<div class="list">
+				      		
+						</div>
+				    </div>
+				    <div id="tab2" class="weui-tab__bd-item">
+				    	<div class="list">
+				           
+						</div>
+				    </div>
+			  	</div>
+			</div>			
+		</div>
+		
+	    
+	</body>
+<script src="../public/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/jquery-weui.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/global-mobile.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/pumpState.js" type="text/javascript" charset="utf-8"></script>
+</html>

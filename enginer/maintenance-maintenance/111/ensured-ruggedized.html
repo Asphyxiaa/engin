@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>维养资金</title>
+		<link rel="stylesheet" type="text/css" href="../css/bootstrap/css/bootstrap.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/sider.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/font-awesome-4.7.0/css/font-awesome.min.css" /> 
+		<link rel="stylesheet" type="text/css" href="../css/layout.min.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/components-rounded.min.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/bootstrap-select.css"/>
+		<link rel="stylesheet" type="text/css" href="../public/bootstrap-table/bootstrap-table.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/nav.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/maintenance-plan.css"/>
+		<!---->
+		<link rel="stylesheet" type="text/css" href="../engineering/engineerion-information.css"/>
+		<style type="text/css">
+			.hd-main .navs .red{
+				background: red;
+			}
+			.dropdown-toggle{
+				color: white;
+			}			
+			.modal-content{
+				width: 240px;
+				top: 50px;
+			}
+			.pulldown-nav{
+				color: #fff;
+				background: #56abf2;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="page-header navbar navbar-fixed-top" style="background: url(../img/bg_bg.png);">
+			<div class="page-header-inner ">
+				<div class="page-logo" style="width: 70px;margin-top: -8px;">
+					<img class="logo-default" src="../img/logo1.png" alt="">
+				</div>
+				<div class="page-logo" style="font-size: 26px;width:500px;color: white;margin-top: 16px;">
+					河湖管理所标准化管理平台
+				</div>
+				<div class="page-top">
+					<div class="top-menu">
+						<ul class="nav navbar-nav pull-right">
+							<li class="dropdown dropdown-extended dropdown-inbox dropdown-dark " id="header_inbox_bar">
+								<a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true" aria-expanded="false">
+									<i class="fa fa-envelope-open"></i>
+									<span class="badge badge-danger"></span>
+								</a>
+								<ul class="dropdown-menu">
+									<li class="external">
+										<a href="javascript:;" onclick="openWeb(6)">查看详情</a>
+									</li>
+									<li>
+										<ul class="dropdown-menu-list scroller" style="height: 275px; overflow: hidden; width: auto;" data-handle-color="#637283" data-initialized="1">
+											<li class="message">
+												<a href="#">
+													<span class="photo">
+		                                                        <img class="img-circle" alt="">
+		                                                    </span>
+													<span class="subject">
+		                                                        <span class="from"></span>
+													<span class="time">  </span>
+													</span>
+													<span class="message"></span>
+												</a>
+											</li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+		
+							<li class="dropdown dropdown-user dropdown-dark">
+								<a href="javascript:;" class="dropdown-toggle">
+									<span class="username username-hide-on-mobile" id="username"></span>
+									<img alt="" class="img-circle" id="userpic" />
+								</a>
+							</li>
+							<li class="dropdown dropdown-user dropdown-dark">
+								<a href="javascript:;" class="dropdown-toggle" data-target="#logOut" data-toggle="modal" style="height: 100%;">
+									<i class="fa fa-sign-out" aria-hidden="true" style="font-size: 30px;margin-top: 5px;"></i>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="modal fade" id="logOut" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">  
+        <!-- 退出提示框 -->
+	        <div class="modal-dialog" id="modal-dialog">
+	            <div class="modal-content">
+	                <div class="modal-header">
+	                    <button type="button" class="close" data-dismiss="modal" 
+	                            aria-hidden="true">×
+	                    </button>
+	                    <h4 class="modal-title" id="myModalLabel">
+	                        提示
+	                    </h4>
+	                </div>
+	                <div class="modal-body" style="font-size:15px; ">
+	                      确认是否退出
+	                </div>
+	                <div class="modal-footer">
+	                    <button type="button" class="btn btn-default" 
+	                            data-dismiss="modal">否
+	                    </button>
+	                    <button type="button" class="btn btn-primary">
+	                        是
+	                    </button>
+	                </div>
+	            </div>
+	        </div>
+	    </div>
+		<!---->
+		<div class="hd-main clearfix" id="header" style="margin-top: 76px;">
+			<div class="navs">
+				<!--1-->
+				<a class="def-nav li " href="../map.html">首页</a>
+				<!--2-->
+				<a class="def-nav li " href="../engineering/engineerion-information.html">工程信息</a>	
+				<!--3-->
+				<div class="def-nav nav-organization">
+					<a class="pulldown-nav " >
+						组织管理
+					</a>
+					<div class="pulldown org app-url">
+						<div class="content">
+							<a class="li" href="../Organization/unit.html">
+								<i class="fa fa-file fa-lg"></i>
+								<span class="text">组织机构</span>
+							</a>
+							<a class="li" href="../management/position.html">
+								<i class="fa fa-file fa-lg"></i>
+								<span class="text">岗位事项</span>
+							</a>
+							<a class="li " href="../engineering/management-personnel.html">
+								<i class="fa fa-file fa-lg"></i>
+								<span class="text">管理人员</span>
+							</a>
+							<a class="li " href="../engineeringmanagement-funds.html">
+								<i class="fa fa-file fa-lg"></i>
+								<span class="text">管理经费</span>
+							</a>
+							<a class="li " href="../engineeringmanagement-training.html">
+								<i class="fa fa-file fa-lg"></i>
+								<span class="text">管理培训</span>
+							</a>
+						</div>	
+					</div>
+				</div>
+				<!--4-->
+				<div class="def-nav nav-emergency">
+					<a class="pulldown-nav " >
+						应急管理
+					</a>
+					<div class="pulldown contingency-management app-url">
+						<div class="content">
+							<a class="li" href="../emergency/emergency-plan.html">
+								<i class="fa fa-file fa-lg"></i>
+								<span class="text">应急预案</span>
+							</a>
+							<a class="li " href="../emergency/spare-source.html">
+								<i class="fa fa-file fa-lg"></i>
+								<span class="text">备用电源</span>
+							</a>
+							<a class="li" href="../emergency/emergency-drill.html">
+								<i class="fa fa-file fa-lg"></i>
+								<span class="text">应急演练</span>
+							</a>
+							<a class="li" href="../emergency/materials.html">
+								<i class="fa fa-file fa-lg"></i>
+								<span class="text">防汛物资</span>
+							</a>
+							<a class="li" href="../emergency/danger-management.html">
+								<i class="fa fa-file fa-lg"></i>
+								<span class="text">险情管理</span>
+							</a>
+							<a class="li" href="../emergency/emergency-response.html">
+								<i class="fa fa-file fa-lg"></i>
+								<span class="text">应急响应</span>
+							</a>
+							<!--<a class="li" href="#">
+								<i class="fa fa-file fa-lg"></i>
+								<span class="text">防汛防台</span>
+							</a>
+							<a class="li" href="#">
+								<i class="fa fa-file fa-lg"></i>
+								<span class="text">突发性水</span>
+							</a>
+							<a class="li" href="#">
+								<i class="fa fa-file fa-lg"></i>
+								<span class="text">机电设</span>
+							</a>-->
+						</div>	
+					</div>
+				</div>		
+				<!--5-->
+				<div class="def-nav nav-equipment">
+					<a class="pulldown-nav ">
+						设备管理
+					</a>
+					<div class="pulldown equipment-management app-url">
+						<div class="content">
+							<a class="li" href="../equipment/device-management.html">
+								<i class="fa fa-file fa-lg"></i>
+								<span class="text">设备管理</span>
+							</a>
+							<a class="li" href="../equipment/rating-record.html">
+								<i class="fa fa-file fa-lg"></i>
+								<span class="text">评级记录</span>
+							</a>
+						</div>	
+					</div>
+				</div>	
+				<!--6-->
+				<div class="def-nav nav-monitor">
+					<a class="pulldown-nav ">
+						监控监测
+					</a>
+					<div class="pulldown monitor app-url">
+						<div class="content">
+							<a class="li" href="#">
+								<i class="fa fa-file fa-lg"></i>
+								<span class="text">监控巡查</span>
+							</a>
+							<a class="li" href="#">
+								<i class="fa fa-file fa-lg"></i>
+								<span class="text">隐患记录</span>
+							</a>
+							<a class="li" href="#">
+								<i class="fa fa-file fa-lg"></i>
+								<span class="text">视频监控</span>
+							</a>
+							<a class="li" href="#">
+								<i class="fa fa-file fa-lg"></i>
+								<span class="text">安全监测</span>
+							</a>
+							<a class="li" href="#">
+								<i class="fa fa-file fa-lg"></i>
+								<span class="text">实时监控</span>
+							</a>
+							
+						</div>	
+					</div>
+				</div>
+				<!--7-->
+				<div class="def-nav nav-check">
+					<a class="pulldown-nav " >
+						安全检查
+					</a>
+					<div class="pulldown check app-url">
+						<div class="content">
+							<a class="li " href="../check/check1.html">
+								<i class="fa fa-file fa-lg"></i>
+								<span class="text">运行检查</span>
+							</a>
+							<a class="li" href="#">
+								<i class="fa fa-file fa-lg"></i>
+								<span class="text">日常检查</span>
+							</a>
+							<a class="li" href="../check/regular-inspection.html">
+								<i class="fa fa-file fa-lg"></i>
+								<span class="text">定期检查</span>
+							</a>
+							<a class="li" href="../check/especially-check.html">
+								<i class="fa fa-file fa-lg"></i>
+								<span class="text">特别检查</span>
+							</a>
+							<a class="li" href="../check/special-check.html">
+								<i class="fa fa-file fa-lg"></i>
+								<span class="text">专项检查</span>
+							</a>
+							<a class="li" href="#">
+								<i class="fa fa-file fa-lg"></i>
+								<span class="text">调度检查</span>
+							</a>
+							<a class="li" href="#">
+								<i class="fa fa-file fa-lg"></i>
+								<span class="text">设备检查</span>
+							</a>
+						</div>	
+					</div>
+				</div>
+				<!--8-->
+				<div class="def-nav nav-service">
+					<a class="pulldown-nav red" >
+						维修养护
+					</a>
+					<div class="pulldown service app-url">
+						<div class="content">
+							<a class="li" href="maintenance-plan.html">
+								<i class="fa fa-file fa-lg"></i>
+								<span class="text">维养计划</span>
+							</a>
+							<a class="li red" href="maintenance-funds.html">
+								<i class="fa fa-file fa-lg"></i>
+								<span class="text">维养资金</span>
+							</a>
+							<a class="li" href="#">
+								<i class="fa fa-file fa-lg"></i>
+								<span class="text">维养管理</span>
+							</a>
+							<a class="li" href="#">
+								<i class="fa fa-file fa-lg"></i>
+								<span class="text">除险加固</span>
+							</a>
+							<a class="li" href="#">
+								<i class="fa fa-file fa-lg"></i>
+								<span class="text">物业管理</span>
+							</a>
+							<a class="li" href="#">
+								<i class="fa fa-file fa-lg"></i>
+								<span class="text">物业单位</span>
+							</a>
+							<a class="li" href="#">
+								<i class="fa fa-file fa-lg"></i>
+								<span class="text">合同管理</span>
+							</a>
+						</div>	
+					</div>
+				</div>
+				<!--9-->
+				<div class="def-nav nav-maintain">
+					<a class="pulldown-nav ">
+						维护管理
+					</a>
+					<div class="pulldown maintain app-url">
+						<div class="content">
+							<a class="li" href="#">
+								<i class="fa fa-file fa-lg"></i>
+								<span class="text">部位管理</span>
+							</a>
+							<a class="li" href="#">
+								<i class="fa fa-file fa-lg"></i>
+								<span class="text">描述管理</span>
+							</a>
+							<a class="li" href="#">
+								<i class="fa fa-file fa-lg"></i>
+								<span class="text">设备管理</span>
+							</a>
+							<a class="li" href="#">
+								<i class="fa fa-file fa-lg"></i>
+								<span class="text">结构管理</span>
+							</a>
+							<a class="li" href="#">
+								<i class="fa fa-file fa-lg"></i>
+								<span class="text">模板管理</span>
+							</a>
+						</div>	
+					</div>
+				</div>
+				<!--10-->
+				<div class="def-nav nav-scheduling">
+					<a class="pulldown-nav" >
+						运行操作
+					</a>
+					<div class="pulldown scheduling app-url">
+						<div class="content">
+							<a class="li" href="../dispatch-operation/water-sluice.html">
+								<i class="fa fa-file fa-lg"></i>
+								<span class="text">水闸</span>
+							</a>
+							<a class="li" href="../dispatch-operation/pump-station.html">
+								<i class="fa fa-file fa-lg"></i>
+								<span class="text">泵站</span>
+							</a>	
+						</div>	
+					</div>
+				</div>
+			<!---->
+			</div>
+		</div>
+		<!---->
+		
+		
+		<div class="col-xs-3 col-lg-2" style="display:block;">
+			<div class="portlet light bordered" style="background: #f2fbff;overflow: auto;">
+				<div class="portlet-title tabbable-line" style="position: relative;">
+					<div class="caption caption-md">
+						<i class="icon-globe theme-font hide"></i>
+						<span class="caption-subject font-blue-madison bold uppercase">详情</span>
+					</div>	
+					<!--<span class="caption-subject font-blue-madison bold uppercase">详情</span>-->
+					<div class="select">
+						<div class="col-md-4">
+							<select id="usertype" name="usertype" class="selectpicker show-tick form-control " multiple  >
+								
+							</select>
+						</div>
+					</div>
+				</div>
+				<div class="portlet-body">
+					<div class="tab-content">
+						<div class="tab-pane active" id="tab_1_1">
+							<div class="scroller" data-always-visible="1" data-rail-visible1="0" data-handle-color="#D7DCE2">
+								<ul id="ztree">
+										
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div> 	
+		</div>
+		<!---->
+		<div class="main-content" id="maincontent" style="min-height: 516px;margin-top: -10px;">
+			<div class="fn-panel">
+				<!--讯-->
+				<div class="form-inline flood" style="display: block;">
+		            <div class="form-group">
+		            	
+		            </div>	            
+		            <div class="form-group pull-right">
+		                <button type="button" class="btn btn-sm btn-success" title="维养资金" >
+		                    <a href="http://120.76.241.72:8060/app/main/raise-fund"><i class="fa fa-file"></i></a>
+		                </button>
+		            </div>
+		       	</div>
+		       	<div class="fn-table table-funds" >
+					<div id="table-funds"></div>							
+				</div>	       	
+			</div>		
+		</div>
+		
+	</body>
+	<script src="../public/global.js" type="text/javascript" charset="utf-8"></script>	
+	<script src="../public/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../public/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../public/bootstrap-select.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../public/bootstrap-table/bootstrap-table.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../public/bootstrap-table/bootstrap-table-zh-CN.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../js/nav.js" type="text/javascript" charset="utf-8"></script>
+	<script src="ensured-ruggedized.js" type="text/javascript" charset="utf-8"></script>
+</html>
+

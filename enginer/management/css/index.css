@@ -1,0 +1,476 @@
+.page-header.navbar .top-menu .navbar-nav>li.dropdown.open .dropdown-toggle{
+    background-color:#2d80c7; 
+}
+
+.page-header.navbar .top-menu .navbar-nav > li.dropdown .dropdown-toggle:hover{
+    background-color: #2d80c7;
+}
+
+.page-header.navbar .top-menu .navbar-nav>li.dropdown-dark .dropdown-menu{
+    background-color: white;
+}
+
+.page-header.navbar .top-menu .navbar-nav>li.dropdown-extended .dropdown-menu:after{
+    border-bottom-color:#e3e6f0;
+}
+
+.dangerCount {
+	color: red;
+	text-decoration: underline;
+}
+
+.login {
+	background-color: #e9ecf3 !important;
+}
+
+.btn-center {
+	width: 90%;
+	margin: 0px auto;
+	display: block;
+}
+
+.page-header.navbar {
+	background-image: url(../img/bg_bg.png);
+	background-repeat: repeat-x;
+}
+
+.feeds li {
+	background-color: #f2fbff;
+}
+
+.load {
+	float: left;
+	width: 75px;
+	margin-left: -55px;
+	font-size: 16px;
+	color: #3598dc;
+}
+
+.unit,
+.desc {
+	font-size: 16px;
+}
+
+.info {
+	margin-top: -20px;
+}
+
+.checkDetail {
+	margin-top: 8px;
+	font-size: 13px;
+}
+
+#getToDoTasksTable .content {
+	text-align: left;
+	vertical-align: middle;
+	color: white;
+	font-size: 15px;
+}
+
+#getToDoTasksTable .handler {
+	text-align: center;
+	vertical-align: middle;
+	font-size: 15px;
+	font-weight: bold;
+}
+
+#forecasting {
+	width: 400px;
+	height: auto;
+	position: absolute;
+	background: black;
+	opacity: 0.4;
+	border: 1px solid white;
+	left: 25px;
+	top: 25px;
+	z-index: 999;
+}
+
+#scrollingInfo {
+	width: 800px;
+	height: 37px;
+	position: absolute;
+	background: black;
+	opacity: 0.4;
+	border: 1px solid white;
+	right: 25px;
+	top: 25px;
+	z-index: 999;
+}
+
+.page-container {
+	padding: 10px 10px 0;
+}
+
+.col-100vh {
+	height: 90%;
+	/*写给不支持calc()的浏览器*/
+	height: -moz-calc(100vh - 181px);
+	height: -webkit-calc(100vh - 181px);
+	height: calc(100vh - 181px);
+	margin-left: 0px;
+	margin-right: 0px;
+}
+
+.col-100vh-img {
+	height: 100%;
+	background: white;
+	padding: 10px;
+}
+
+.col-100vh-row {
+	height: 90%;
+	/*写给不支持calc()的浏览器*/
+	height: -moz-calc(100vh - 590px);
+	height: -webkit-calc(100vh - 590px);
+	height: calc(100vh - 590px);
+}
+
+#waterInfo {
+	height: 170px;
+}
+
+#lockGate {
+	height: 210px;
+}
+
+.checkDetail {
+	margin-top: 1px;
+}
+
+.blackWord {
+	color: black;
+}
+
+.hidh {
+	display: none;
+}
+
+#header_inbox_bar {
+	height: 75px;
+	display: inline-block;
+}
+
+#noCheck {
+	font-size: 15px;
+}
+
+#rep-des {
+	border: none;
+}
+
+.col-md-6 {
+	margin: 4px 0;
+}
+
+#portlet-body {
+	width: 360px;
+	margin-left: 15px;
+}
+
+.portlet.light>.portlet-title {
+	min-height: 30px;
+}
+
+#calendar {
+	width: 108%;
+	background: white;
+}
+
+
+.footer i {
+	font-style: normal;
+}
+
+#loading {
+	display: none;
+	position: absolute;
+	top: 10px;
+	right: 10px;
+}
+
+.fc-basic-view .fc-day-number,
+.fc-basic-view .fc-week-number {
+	font-size: 16px;
+}
+
+.fc button {
+	display: block;
+}
+
+.fc-button-group {
+	display: block;
+}
+
+#fc-toolbar {
+	margin-bottom: 0.2em;
+}
+
+h2 {
+	font-size: 25px;
+}
+
+.fc-basic-view .fc-body .fc-row {
+	min-height: 0.5em;
+}
+
+#fc-toolbar {
+	display: none;
+}
+
+.text-success{
+	background: #679ae6;
+	border-color: #679ae6;
+}
+
+@media screen and (min-width: 1410px) and (max-width: 1610px) {
+	.desc {
+		height: 23px;
+		font-size: 12px;
+	}
+	.unit {
+		font-size: 14px;
+	}
+	#calendar {
+		width: 88%;
+		background: white;
+	}
+	.fc-basic-view .fc-body .fc-row {
+		min-height: 0.2em;
+	}
+	.btn-group-lg>.btn,
+	.btn-lg {
+		padding: 10px;
+		font-size: 16px;
+		line-height: 1.33333;
+		border-radius: 6px;
+	}
+	#scrollingInfo {
+		width: 600px;
+	}
+	#forecasting {
+		width: 360px;
+	}
+	#getToDoTasksTable .content {
+		font-size: 14px;
+	}
+	#noCheck {
+		font-size: 14px;
+	}
+	.col-100vh-row {
+		height: 90%;
+		/*写给不支持calc()的浏览器*/
+		height: -moz-calc(100vh - 480px);
+		height: -webkit-calc(100vh - 480px);
+		height: calc(100vh - 480px);
+	}
+	#waterInfo {
+		height: 120px;
+		font-size: 14px;
+	}
+	#lockGate {
+		height: 162px;
+		font-size: 14px;
+	}
+	.portlet.light>.portlet-title>.caption.caption-md>.caption-subject {
+		font-size: 14px;
+	}
+	.portlet.light>.portlet-title {
+		min-height: 20px;
+	}
+	.portlet>.portlet-title>.caption {
+		line-height: 12px;
+	}
+	.progress {
+		margin-bottom: 5px;
+	}
+	.feeds li .col1>.cont>.cont-col1>.label>i {
+		font-size: 12px;
+	}
+	.checkDetail {
+		margin-top: 1px;
+		font-size: 12px;
+	}
+	.portlet.light .portlet-body {
+		padding-top: 0px;
+	}
+	.portlet>.portlet-title {
+		margin-bottom: 3px;
+	}
+	#portlet-body {
+		margin-left: 8px;
+	}
+	.portlet.light {
+		padding: 8px 20px 10px;
+	}
+	.portlet.light>.portlet-title>.caption,
+	.portlet.light>.portlet-title>.actions {
+		padding: 2px 0;
+	}
+	.fc-basic-view .fc-day-number,
+	.fc-basic-view .fc-week-number {
+		font-size: 12px;
+	}
+	#sel {
+		padding: 0 5px;
+		font-size: 12px;
+	}
+	tr:first-child>td>.fc-day-grid-event {
+		margin-top: -2px;
+	}
+	.text-success {
+		font-size: 12px;
+		-webkit-transform: scale(0.9);
+	}
+	.text-faild {
+		font-size: 12px;
+		-webkit-transform: scale(0.9);
+	}
+	
+}
+
+@media screen and (max-width: 1400px) {
+	.desc {
+		width: 80px;
+		height: 23px;
+		font-size: 12px;
+	}
+	.load {
+		font-size: 12px;
+	}
+	.unit {
+		font-size: 12px;
+	}
+	#calendar {
+		width: 60%;
+		background: white;
+	}
+	.fc-basic-view .fc-body .fc-row {
+		min-height: 0.2em;
+	}
+	.btn-group-lg>.btn,
+	.btn-lg {
+		padding: 10px;
+		font-size: 14px;
+		line-height: 1.33333;
+		border-radius: 6px;
+	}
+	#scrollingInfo {
+		width: 400px;
+	}
+	#forecasting {
+		width: 260px;
+	}
+	#getToDoTasksTable .content {
+		font-size: 12px;
+	}
+	#noCheck {
+		font-size: 12px;
+	}
+	.col-100vh-row {
+		height: 90%;
+		/*写给不支持calc()的浏览器*/
+		height: -moz-calc(100vh - 430px);
+		height: -webkit-calc(100vh - 430px);
+		height: calc(100vh - 430px);
+	}
+	#waterInfo {
+		height: 104px;
+	}
+	#lockGate {
+		height: 132px;
+		margin-bottom: 0px;
+	}
+	.feeds li {
+		margin-bottom: 2px;
+	}
+	.portlet.light>.portlet-title>.caption.caption-md>.caption-subject {
+		font-size: 14px;
+		-webkit-transform: scale(0.8);
+	}
+	.portlet.light>.portlet-title {
+		min-height: 20px;
+	}
+	.progress {
+		margin-bottom: 5px;
+	}
+	.feeds li .col1>.cont>.cont-col1>.label>i {
+		font-size: 12px;
+	}
+	.checkDetail {
+		margin-top: -3px;
+		font-size: 12px;
+		-webkit-transform: scale(0.8);
+	}
+	.portlet.light .portlet-body {
+		padding-top: 0px;
+	}
+	.portlet>.portlet-title {
+		margin-bottom: 3px;
+	}
+	#portlet-body {
+		margin-left: 4px;
+	}
+	.portlet.light {
+		padding: 8px 2px 10px;
+	}
+	.portlet.light>.portlet-title>.caption,
+	.portlet.light>.portlet-title>.actions {
+		padding: 2px 0;
+	}
+	.fc-basic-view .fc-day-number,
+	.fc-basic-view .fc-week-number {
+		font-size: 12px;
+		-webkit-transform: scale(0.7);
+	}
+	#sel {
+		padding: 0 5px;
+		font-size: 12px;
+	}
+	tr:first-child>td>.fc-day-grid-event {
+		margin-top: -12px;
+	}
+	.text-success {
+		font-size: 12px;
+		-webkit-transform: scale(0.7);
+	}
+	.text-faild {
+		font-size: 12px;
+		-webkit-transform: scale(0.7);
+	}
+}
+
+@media screen and (max-width: 1400px) {
+   
+	.text-success{
+		color: greenyellow;
+	}
+	.text-faild{
+		color: red;
+	}
+	.fc-content{
+		display: none;		
+	}
+	.fc-event-container{
+		position: relative;
+	}
+	.dian{
+		position: absolute;
+		top: -5px;
+		right: 2px;
+	}
+}
+
+
+.c1{
+	color: green;
+	text-align: center;
+}	
+.c2{
+	color: red;
+	text-align: center;
+}
+.fc-event{
+	background: transparent;
+	border: none;
+}	
